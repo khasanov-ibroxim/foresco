@@ -15,6 +15,7 @@ import { useGlobals } from "../../hooks/useGlobals";
 import { serverApi } from "../../../lib/config";
 import { BoltOutlined, Logout } from "@mui/icons-material";
 
+
 interface HomeNavbarProps {
   cartItems: CartItem[];
   onAdd: (item: CartItem) => void;
@@ -62,8 +63,13 @@ export default function HomeNavbar(props: HomeNavbarProps) {
               </NavLink>
             </Box>
             <Box className={"hover-line"}>
+              <NavLink to="/about-us" activeClassName={"underline"}>
+                About Us
+              </NavLink>
+            </Box>
+            <Box className={"hover-line"}>
               <NavLink to="/products" activeClassName={"underline"}>
-                Products
+                Universities
               </NavLink>
             </Box>
             {authMember ? (

@@ -70,7 +70,7 @@ export default function PausedOrders(props: PausedOrderProps) {
       if (confirmation) {
         const order = new OrderService();
         await order.updateOrder(input);
-        setValue("2")
+        setValue("2");
         setOrderBuilder(new Date());
       }
     } catch (err) {
@@ -83,6 +83,7 @@ export default function PausedOrders(props: PausedOrderProps) {
     <TabPanel value={"1"}>
       <Stack>
         {pausedOrders?.map((order: Order) => {
+          console.log("orderItems:", order.orderItems);
           return (
             <Box key={order._id} className="order-main-box">
               <Box className="order-box-scroll">
@@ -91,6 +92,9 @@ export default function PausedOrders(props: PausedOrderProps) {
                     (ele: Product) => item.productId === ele._id
                   )[0];
                   const imagePath = `${serverApi}/${product.productImages[0]}`;
+                  console.log("imagePath:", imagePath);
+                  
+
                   return (
                     <Box key={item._id} className="orders-name-price">
                       <img src={imagePath} className="order-dish-img" />
@@ -108,7 +112,6 @@ export default function PausedOrders(props: PausedOrderProps) {
                   );
                 })}
               </Box>
-
               <Box className="total-price-box">
                 <Box className="box-total">
                   <p>Product price</p>

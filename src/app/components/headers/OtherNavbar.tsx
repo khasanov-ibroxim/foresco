@@ -28,7 +28,6 @@ interface OtherNavbarProps {
   handleLogoutRequest: () => void;
 }
 export default function OtherNavbar(props: OtherNavbarProps) {
-
   const {
     cartItems,
     onAdd,
@@ -55,6 +54,11 @@ export default function OtherNavbar(props: OtherNavbarProps) {
           <Stack className="links">
             <Box className={"hover-line"}>
               <NavLink to="/">Home</NavLink>
+            </Box>
+            <Box className={"hover-line"}>
+              <NavLink to="/about-us" activeClassName={"underline"}>
+                About Us
+              </NavLink>
             </Box>
             <Box className={"hover-line"}>
               <NavLink to="/products" activeClassName={"underline"}>
@@ -110,7 +114,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
               />
             )}
 
-<Menu
+            <Menu
               anchorEl={anchorEl}
               id="account-menu"
               open={Boolean(anchorEl)}
@@ -152,7 +156,6 @@ export default function OtherNavbar(props: OtherNavbarProps) {
                 Logout
               </MenuItem>
             </Menu>
-
           </Stack>
         </Stack>
       </Container>

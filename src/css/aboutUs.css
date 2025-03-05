@@ -1,0 +1,109 @@
+.about-frame {
+    margin-top: 170px;
+   
+  }
+/**-----ABOUT-----**/
+
+
+.about-frame .about-container {
+  width: 1200px;
+  height: 616px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.about-frame .about-container .about-texts {
+  width: 572px;
+  height: 596px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about-frame .about-container .about-texts .title {
+  color: #1a906b;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 64px */
+}
+
+.about-frame .about-container .about-texts .topic {
+  color: #141414;
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 58px;
+  text-transform: capitalize;
+}
+
+.about-frame .about-container .about-texts .info {
+  color: #1e1e1e;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+
+.about-frame .about-container .about-texts .button button {
+  border-radius: 100px;
+  background: #22b286;
+  display: flex;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  width: 127px;
+  height: 57px;
+  gap: 10px;
+  border: none;
+}
+
+.about-frame .about-container .about-texts .button button .btn-txt {
+  color: var(--Secondary-Color-White, #fff);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.about-frame .about-container .about-images {
+  width: 572px;
+  height: 596px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-frame .about-container .about-images .first-img {
+  width: 376px;
+  height: 246px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: lightgray 50% / cover no-repeat;
+  margin-left: 120px;
+  margin-bottom: 50px;
+
+}
+
+.about-frame .about-container .about-images .second-img {
+    width: 376px;
+    height: 246px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-right: 120px;
+    background: lightgray 50% / cover no-repeat;
+  }
+
+/**-----FEATURE-----**/

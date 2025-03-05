@@ -7,6 +7,7 @@ import UserPage from "./screens/userPage";
 import HomeNavbar from "./components/headers/HomeNavbar";
 import OtherNavbar from "./components/headers/OtherNavbar";
 import Footer from "./components/footer";
+import AboutUsPage from "./screens/aboutUsPage";
 import HelpPage from "./screens/helpPage";
 import useBasket from "./hooks/useBasket";
 import AuthenticationModal from "./components/auth";
@@ -17,6 +18,7 @@ import { useGlobals } from "./hooks/useGlobals";
 import "../css/app.css";
 import "../css/navbar.css";
 import "../css/footer.css";
+
 
 function App() {
   const location = useLocation();
@@ -80,6 +82,9 @@ function App() {
         />
       )}
       <Switch>
+        <Route path="/about-us">
+          <AboutUsPage />
+        </Route>
         <Route path="/products">
           <ProductPage onAdd={onAdd} />
         </Route>
