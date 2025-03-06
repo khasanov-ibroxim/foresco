@@ -1,11 +1,9 @@
-.about-frame {
-    margin-top: 170px;
-   
-  }
 /**-----ABOUT-----**/
+.aboutUs-page .about-frame {
+  margin-top: 170px;
+}
 
-
-.about-frame .about-container {
+.aboutUs-page .about-frame .about-container {
   width: 1200px;
   height: 616px;
   /* background-color: aqua; */
@@ -17,7 +15,7 @@
   margin-bottom: 80px;
 }
 
-.about-frame .about-container .about-texts {
+.aboutUs-page .about-frame .about-container .about-texts {
   width: 572px;
   height: 596px;
   display: flex;
@@ -26,7 +24,7 @@
   gap: 20px;
 }
 
-.about-frame .about-container .about-texts .title {
+.aboutUs-page .about-frame .about-container .about-texts .title {
   color: #1a906b;
   text-align: center;
   font-family: "Inter", sans-serif;
@@ -36,7 +34,7 @@
   line-height: 100%; /* 64px */
 }
 
-.about-frame .about-container .about-texts .topic {
+.aboutUs-page .about-frame .about-container .about-texts .topic {
   color: #141414;
   font-family: "Inter", sans-serif;
   font-size: 40px;
@@ -46,7 +44,7 @@
   text-transform: capitalize;
 }
 
-.about-frame .about-container .about-texts .info {
+.aboutUs-page .about-frame .about-container .about-texts .info {
   color: #1e1e1e;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -55,7 +53,7 @@
   line-height: 26px; /* 162.5% */
 }
 
-.about-frame .about-container .about-texts .button button {
+.aboutUs-page .about-frame .about-container .about-texts .button button {
   border-radius: 100px;
   background: #22b286;
   display: flex;
@@ -68,7 +66,13 @@
   border: none;
 }
 
-.about-frame .about-container .about-texts .button button .btn-txt {
+.aboutUs-page
+  .about-frame
+  .about-container
+  .about-texts
+  .button
+  button
+  .btn-txt {
   color: var(--Secondary-Color-White, #fff);
   text-align: center;
   font-family: "Inter", sans-serif;
@@ -78,7 +82,7 @@
   line-height: normal;
 }
 
-.about-frame .about-container .about-images {
+.aboutUs-page .about-frame .about-container .about-images {
   width: 572px;
   height: 596px;
   display: flex;
@@ -86,7 +90,7 @@
   align-items: center;
 }
 
-.about-frame .about-container .about-images .first-img {
+.aboutUs-page .about-frame .about-container .about-images .first-img {
   width: 376px;
   height: 246px;
   flex-shrink: 0;
@@ -94,16 +98,246 @@
   background: lightgray 50% / cover no-repeat;
   margin-left: 120px;
   margin-bottom: 50px;
-
 }
 
-.about-frame .about-container .about-images .second-img {
-    width: 376px;
-    height: 246px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    margin-right: 120px;
-    background: lightgray 50% / cover no-repeat;
-  }
+.aboutUs-page .about-frame .about-container .about-images .second-img {
+  width: 376px;
+  height: 246px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin-right: 120px;
+  background: lightgray 50% / cover no-repeat;
+}
 
 /**-----FEATURE-----**/
+
+.aboutUs-page .features-frame {
+  margin-top: 170px;
+}
+
+.aboutUs-page .features-frame .features-container {
+  width: 1200px;
+  height: 616px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.aboutUs-page .features-frame .features-container .feature-image {
+  width: 434px;
+  height: 471px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin-right: 120px;
+}
+
+.aboutUs-page .features-frame .features-container .features-texts {
+  width: 572px;
+  height: 596px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.aboutUs-page .features-frame .features-container .features-texts .title {
+  color: #1a906b;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.aboutUs-page .features-frame .features-container .features-texts .topic {
+  color: #141414;
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 58px; /* 120.833% */
+}
+
+.aboutUs-page .features-frame .features-container .features-texts .info {
+  color: #1e1e1e;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+
+.aboutUs-page
+  .features-frame
+  .features-container
+  .features-texts
+  .button
+  button {
+  border-radius: 100px;
+  background: #22b286;
+  display: flex;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  width: 157px;
+  height: 57px;
+  gap: 10px;
+  border: none;
+}
+
+.aboutUs-page
+  .features-frame
+  .features-container
+  .features-texts
+  .button
+  button
+  .btn-txt {
+  color: var(--Secondary-Color-White, #fff);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/**-----OUR BENFITS-----**/
+
+.aboutUs-page .benefits-frame .benefits-container {
+  width: 1160px;
+  height: 784px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.aboutUs-page .benefits-frame .benefits-container .benefits-texts {
+  width: 814px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.aboutUs-page .benefits-frame .benefits-container .benefits-texts .title {
+  color: #1a906b;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.aboutUs-page .benefits-frame .benefits-container .benefits-texts .topic {
+  color: #141414;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 58px; /* 145% */
+}
+
+.aboutUs-page .benefits-frame .benefits-container .benefits-texts .info {
+  width: 582px;
+  color: #1e1e1e;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+
+.aboutUs-page .benefits-frame .benefits-container .benefits-cards {
+  margin-top: 14px ;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.aboutUs-page .benefits-frame .benefits-container .benefits-cards .card-row {
+  width: 1160px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  /* background-color: burlywood; */
+}
+.aboutUs-page
+  .benefits-frame
+  .benefits-container
+  .benefits-cards
+  .card-row
+  .card {
+  display: inline-flex;
+  height: 236px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  width: 376px;
+  height: 236px;
+  background-color: #F7FDF9;
+  border-radius: 10px;
+}
+
+.aboutUs-page
+  .benefits-frame
+  .benefits-container
+  .benefits-cards
+  .card-row
+  .card
+  .number {
+  display: flex;
+  width: 54px;
+  height: 54px;
+  justify-content: center;
+  align-items: center;
+  color: #22b286;
+  text-align: right;
+  font-family: Inter, sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.aboutUs-page
+  .benefits-frame
+  .benefits-container
+  .benefits-cards
+  .card-row
+  .card
+  .title {
+  color: #141414;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 24px */
+}
+
+.aboutUs-page
+  .benefits-frame
+  .benefits-container
+  .benefits-cards
+  .card-row
+  .card
+  .info {
+  color: #1e1e1e;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}

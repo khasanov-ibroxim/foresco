@@ -6,10 +6,10 @@ import "../../../css/aboutUs.css";
 
 export default function AboutUsPage() {
   const products = useRouteMatch();
-  console.log("products:", products);
+  console.log("aboutUs:", products);
 
   return (
-    <div className={"products-page"}>
+    <div className={"aboutUs-page"}>
         <Route >
           <About />
           <Features />

@@ -1,26 +1,34 @@
 export const faq = [
 	{
-		question: 'How to make order?',
-		answer: 'You should choose products and make an order via basket!',
+		question: 'How do I get started with your services?',
+		answer: 'You can start by filling out our contact form or booking a consultation. We’ll guide you through the process based on your needs.',
 	},
 	{
-		question: 'How long does delivery takes?',
-		answer: 'It depends on your location. The max delivery time is 1 hour!',
+		question: 'What universities do you help with applications?',
+		answer: 'We assist with applications to universities worldwide, including the US, UK, Canada, Europe, and more!',
 	},
 	{
-		question: 'Is our details secure in this platform?',
-		answer: 'Of course, we take full responsibility for your provided user details!',
+		question: 'Can you help with writing personal statements and essays?',
+		answer: 'Absolutely! We provide expert guidance on crafting compelling personal statements and essays tailored to your desired universities.',
 	},
 	{
-		question: 'I am blocked, what should I do?',
-		answer: 'There is a reason for your block, please contact to us!',
+		question: 'Is my personal information secure?',
+		answer: 'Yes, we take privacy seriously and ensure that your personal data is kept confidential and secure.',
 	},
 	{
-		question: 'How can I cancel order?',
-		answer: 'You can cancel your order any time easily, just go to your orders page!',
+		question: 'Do you offer interview preparation?',
+		answer: 'Yes! We offer mock interviews and coaching to help you excel in university admission interviews.',
 	},
 	{
-		question: 'Who developed this platform?',
-		answer: 'ITC Global developers developed this platform!',
+		question: 'How long does the application process take?',
+		answer: 'It depends on the university and country. We recommend starting at least 3-6 months before the deadline for the best results.',
+	},
+	{
+		question: 'What if I get stuck in the process?',
+		answer: 'We’re here to help! You can always reach out via email or book a session with us for additional support.',
+	},
+	{
+		question: 'Who runs this college counseling service?',
+		answer: 'Our service is run by experienced professionals with expertise in university admissions, essay writing, and academic consulting.',
 	},
 ];
