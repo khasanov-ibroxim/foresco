@@ -14,7 +14,7 @@ import { CartItem } from "../../../lib/types/search";
 import { useGlobals } from "../../hooks/useGlobals";
 import { serverApi } from "../../../lib/config";
 import { BoltOutlined, Logout } from "@mui/icons-material";
-
+import Typography from "@mui/joy/Typography";
 
 interface HomeNavbarProps {
   cartItems: CartItem[];
@@ -53,7 +53,11 @@ export default function HomeNavbar(props: HomeNavbarProps) {
         <Stack className="menu">
           <Box>
             <NavLink to="/">
-              <img className="brand-logo" alt="Logo" src="/icons/burak.svg" />
+              <img
+                className="brand-logo"
+                alt="Logo"
+                src="/icons/new-logo.png"
+              />
             </NavLink>
           </Box>
           <Stack className="links">
@@ -100,14 +104,22 @@ export default function HomeNavbar(props: HomeNavbarProps) {
               onDeleteAll={onDeleteAll}
             />
             {!authMember ? (
-              <Box>
+              <Box className={"auth-wrapper"}>
                 <Button
-                  variant="contained"
                   className="login-button"
                   onClick={() => setLoginOpen(true)}
                 >
-                  Login
+                  <Typography className={"btn-txt"}>Sign in</Typography>
                 </Button>
+                <Box className={"signup"}>
+                  <Button
+                    variant={"contained"}
+                    className={"signup-button"}
+                    onClick={() => setSignupOpen(true)}
+                  >
+                    <Typography className={"btn-txt"}>Sign up</Typography>
+                  </Button>
+                </Box>
               </Box>
             ) : (
               <img
@@ -169,25 +181,36 @@ export default function HomeNavbar(props: HomeNavbarProps) {
         <Stack className={"header-frame"}>
           <Stack className={"detail"}>
             <Box className={"head-main-txt"}>
-              World's Most Delicious Cousine
+              Find <span style={{ color: "#20b486" }}>path</span> to{" "}
+              <span style={{ color: "#20b486" }}>shape</span> your future with{" "}
+              <span style={{ color: "#20b486" }}>confidence</span>
             </Box>
-            <Box className={"wel-txt"}>The Choice, not just a choice</Box>
-            <Box className={"service-txt"}>24 hours service</Box>
-            <Box className={"signup"}>
-              {!authMember ? (
-                <Button
-                  variant={"contained"}
-                  className={"signup-button"}
-                  onClick={() => setSignupOpen(true)}
-                >
-                  SIGN UP
-                </Button>
-              ) : null}
+            <Box className={"wel-txt"}>
+              Find the perfect university with expert insights. The smartest way
+              to explore, compare, and plan your future education.
+            </Box>
+            <Box className={"service-btns"}>
+              <Box className={"signup"}>
+                {!authMember ? (
+                  <Button
+                    className={"signup-button"}
+                    onClick={() => setSignupOpen(true)}
+                  >
+                    Get Started
+                  </Button>
+                ) : null}
+              </Box>
+
+              <Button className={"Scholarships"}>
+                <NavLink to="/products">
+                  <Typography className={"btn-txt"}>Scholarships</Typography>
+                </NavLink>
+              </Button>
+            </Box>
+            <Box className={"logo-frame"}>
+              <div className={"logo-img"}></div>
             </Box>
           </Stack>
-          <Box className={"logo-frame"}>
-            <div className={"logo-img"}></div>
-          </Box>
         </Stack>
       </Container>
     </div>
