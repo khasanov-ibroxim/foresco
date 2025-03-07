@@ -58,7 +58,7 @@ export default function HomePage() {
 
   return (
     <div className={"homepage"}>
-      <Statistics />
+      {/* <Statistics /> */}
       <PopularDishes />
       <NewDishes />
       <Advertisement />

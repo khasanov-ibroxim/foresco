@@ -210,6 +210,32 @@ export default function HomeNavbar(props: HomeNavbarProps) {
             <Box className={"logo-frame"}>
               <div className={"logo-img"}></div>
             </Box>
+
+            <Stack className={"brand-frame"}>
+              <Box className={"brand-txt-wrapper"}>
+                <Typography className={"txt"}>
+                  <span
+                    style={{
+                      color: "#20B486",
+                      fontFamily: "Inter, sans-serif",
+                      fontSize: "30px",
+                      fontStyle: "normal",
+                      fontWeight: 700,
+                      lineHeight: "34px",
+                    }}
+                  >
+                    250+
+                  </span><br />
+                  Collaboration
+                </Typography>
+              </Box>
+              <Box className={"brand-logo"}>
+                <div className={"duolingo"}> <img src="/icons/duolingo.svg" alt="" /></div>
+                <div className={"codecov"}><img src="/icons/codecev.svg" alt="" /></div>
+                <div className={"testing"}><img src="/icons/UserTesting.svg" alt="" /></div>
+                <div className={"magic"}><img src="/icons/MagicLeap.svg" alt="" /></div>
+              </Box>
+            </Stack>
           </Stack>
         </Stack>
       </Container>
