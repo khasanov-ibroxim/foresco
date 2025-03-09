@@ -62,7 +62,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
             </Box>
             <Box className={"hover-line"}>
               <NavLink to="/products" activeClassName={"underline"}>
-                Products
+                Universities
               </NavLink>
             </Box>
             {authMember ? (

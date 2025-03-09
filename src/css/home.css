@@ -1,51 +1,233 @@
 .homepage {
   width: 100%;
   height: auto;
-  
 }
- 
-/** STATISTICS **/
 
-.homepage .static-frame {
+/** Services **/
+
+.homepage .services-frame {
+  margin-top: 80px;
+  margin-bottom: 70px;
   width: 100%;
-  height: 236px;
-  background: #343434;
+  height: 360px;
+  /* background-color: #20B486; */
 }
 
-.homepage .static-frame .info {
-  height: 100%;
+.homepage .services-frame .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.homepage .services-frame .info .title {
+  color: #20b486;
+  text-align: center;
+
+  /* Text md/Semibold */
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  align-self: stretch;
+}
+
+.homepage .services-frame .info .txt {
+  color: #101828;
+  text-align: center;
+  width: 768px;
+  height: 88px;
+
+  /* Display md/Semibold */
+  font-family: Inter, sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 44px; /* 122.222% */
+  letter-spacing: -0.72px;
+}
+
+.cards,
+.card,
+.container,
+.row,
+.col-sm-4 {
+  background: none !important;
+  border: none !important;
+}
+
+.homepage .services-frame .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  height: 290px;
+}
+
+.our-services {
+  /* background-color: #140342; */
+  margin-top: 40px;
+}
+.homepage .services-frame .our-services .flip-container .title {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 6px;
   align-items: center;
+  justify-content: center;
+  width: 316px;
+  height: 48px;
 }
 
-.homepage .static-frame .info .static-box {
-  width: 200px;
-  height: 116px;
+.homepage .services-frame .our-services .flip-container .title .title-txt {
+  width: 248px;
+  height: 36px;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+  letter-spacing: 0.48px;
+}
+.homepage .services-frame .our-services .flip-container .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.homepage
+  .services-frame
+  .our-services
+  .flip-container
+  .content-wrapper
+  .content
+  .txt {
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 28.8px */
+  width: 293px;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.homepage
+  .services-frame
+  .our-services
+  .flip-container
+  .flipper
+  .front
+  .content-wrapper
+  .content
+  .button {
+  margin-top: 20px;
+  /* margin-left: -60px; */
+}
+
+.homepage
+  .services-frame
+  .our-services
+  .flip-container
+  .flipper
+  .front
+  .content-wrapper
+  .content
+  .button
+  button {
+  background-color: transparent;
+  border: none;
+  margin-left: -152px;
+}
+
+.homepage
+  .services-frame
+  .our-services
+  .flip-container
+  .flipper
+  .front
+  .content-wrapper
+  .content
+  .btn-txt {
+  padding-right: 10px;
+  color: #fff;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.36px;
+}
+
+.homepage .services-frame .our-services .flip-container .flipper .back .title {
+  color: #4ac8ae;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+  letter-spacing: 0.48px;
+}
+
+.homepage .services-frame .our-services .flip-container .flipper .back .txt {
+  color: black;
+}
+
+.flip-container {
+  perspective: 1000px;
+  margin: 0 auto 60px auto;
+  width: 320px;
+  height: 200px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
 }
 
-.homepage .static-frame .info .static-box .static-num {
-  text-align: center;
-  font-family: Poppins;
-  font-size: 54px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 80px;
-  color: #d7b686;
+.front h3,
+.back h5 {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-.homepage .static-frame .info .static-box .static-txt {
-  text-align: center;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 30px;
-  color: #d7b586;
+.back {
+  transform: rotateY(180deg);
+}
+
+.back p {
+  font-size: 14px;
+  margin: 15px;
 }
 
 /** POPULAR DISHES **/
@@ -54,7 +236,7 @@
   width: 100%;
   height: 580px;
   display: flex;
-  background: #F5F6F8;
+  background: #f5f6f8;
 }
 
 .homepage .popular-dishes-frame .popular-section {
@@ -124,7 +306,7 @@
   width: 100%;
   min-height: 605px; /* Allow it to grow if needed */
   display: flex;
-  background: #F5F6F8;
+  background: #f5f6f8;
   padding: 20px 0;
 }
 
@@ -152,8 +334,6 @@
   justify-content: center;
   gap: 20px; /* Adds spacing between cards */
   margin-top: 47px;
-
-  
 }
 
 .homepage .new-products-frame .card {
@@ -239,7 +419,6 @@
   text-align: center;
 }
 
-
 /** ADVERTISEMENT **/
 
 .homepage .ads-restaurant-frame {
@@ -265,7 +444,7 @@
   width: 100%;
   height: 605px;
   display: flex;
-  background: #F5F6F8;
+  background: #f5f6f8;
 }
 
 .homepage .main {
@@ -308,8 +487,6 @@
   align-items: center;
 }
 
-
-
 .homepage .active-users-frame .product-detail .member-nickname {
   color: #000;
   display: flex;
@@ -343,7 +520,7 @@
 .homepage .events-frame {
   width: 100%;
   height: 745px;
-  background: #F5F6F8;
+  background: #f5f6f8;
   display: flex;
 }
 

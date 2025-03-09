@@ -54,12 +54,14 @@ export default function Products(props: ProductsProps) {
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
   }, [productSearch]);
+
   useEffect(() => {
     if (searchText === "") {
       productSearch.search = "";
       setProductSearch({ ...productSearch });
     }
   }, [searchText]);
+
   /** HANDLERS **/
   const searchCollectionHandler = (collection: ProductCollection) => {
     productSearch.page = 1;
@@ -75,6 +77,7 @@ export default function Products(props: ProductsProps) {
     productSearch.search = searchText;
     setProductSearch({ ...productSearch });
   };
+  
   const paginationHandler = (e: ChangeEvent<any>, value: number) => {
     productSearch.page = value;
     setProductSearch({ ...productSearch });
