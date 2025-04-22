@@ -57,6 +57,9 @@
   border: none !important;
 }
 
+.popular-dishes-frame .card{
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+}
 .homepage .services-frame .cards {
   display: flex;
   flex-wrap: wrap;
@@ -235,7 +238,6 @@
 
 .homepage .popular-dishes-frame {
   width: 100%;
-  height: 580px;
   display: flex;
   background: #f5f6f8;
 }
@@ -252,18 +254,22 @@
   font-family: "Roboto Serif";
   font-size: 36px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 900;
   line-height: normal;
   letter-spacing: 1.44px;
   color: #000;
+  margin: 30px 0;
+  text-transform: uppercase;
 }
 
 .homepage .popular-dishes-frame .popular-section .cards-frame {
   width: 100%;
-  margin-top: 43px;
+
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .homepage .popular-dishes-frame .popular-section .cards-frame .card {
@@ -284,6 +290,7 @@
       rgba(0, 0, 0, 0) 200px
     ),
     linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 300px);
+
 }
 
 .homepage .popular-dishes-frame .no-data {
@@ -714,6 +721,9 @@
   }
   .our-services .col-lg-4{
     margin-top: 10px;
+  }
+  .homepage .popular-dishes-frame .popular-section .cards-frame{
+    justify-content: center;
   }
 }
 @media screen and (max-width: 500px) {

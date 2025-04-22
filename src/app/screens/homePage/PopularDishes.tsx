@@ -15,11 +15,15 @@ import { retrievePopularDishes } from "./selector";
 import { Product } from "../../../lib/types/product";
 import { serverApi } from "../../../lib/config";
 
+
+
 /** REDUX SLICE & SELECTOR**/
 const popularDishesRetriever = createSelector(
   retrievePopularDishes,
   (popularDishes) => ({ popularDishes })
 );
+
+
 
 export default function PopularDishes() {
   const { popularDishes } = useSelector(popularDishesRetriever);
@@ -28,7 +32,7 @@ export default function PopularDishes() {
     <div className="popular-dishes-frame">
       <Container>
         <Stack className="popular-section">
-          <Box className="category-title">Popular dishes</Box>
+          <Box className="category-title">Popular <span style={{color:"#1a906b"}}>dishes</span></Box>
           <Stack className="cards-frame">
             {popularDishes.length !== 0 ? (
               popularDishes.map((product: Product) => {
@@ -43,7 +47,7 @@ export default function PopularDishes() {
                       {/* Fixed width and height for the card */}
                       <CardCover
                         sx={{
-                          backgroundImage: `url(${imagePath})`, // Set image as background
+                          backgroundImage: `url("/img/cutlet.webp")`, // Set image as background
                           backgroundSize: "cover", // This will ensure the image covers the entire area
                           backgroundPosition: "center", // Center the image in the container
                           backgroundRepeat: "no-repeat", // Prevent repeating the image
@@ -66,14 +70,15 @@ export default function PopularDishes() {
                           </Typography>
                           <Typography
                             sx={{
-                              fontWeight: "md",
-                              color: "neutral.300",
+                              fontWeight: "lg",
+                              color: "neutral.200",
                               alignItems: "center",
                               display: "flex",
                             }}
                           >
                             {product.productViews}
                             <VisibilityIcon
+                                htmlColor={"#4ac8ae"}
                               sx={{ fontSize: 25, marginLeft: "5px" }}
                             />
                           </Typography>
@@ -86,7 +91,9 @@ export default function PopularDishes() {
                           py: 1.5,
                           px: 1.5,
                           borderTop: "1px solid",
-                          height: "80px",
+                          maxHeight:"50%",
+                          minHeight:"80px",
+                          alignItems:"flex-start"
                         }}
                       >
                         <Box
@@ -99,18 +106,20 @@ export default function PopularDishes() {
                           {/* Icon */}
                           <DescriptionOutlinedIcon
                             sx={{ marginRight: 1 }}
+                            style={{fontSize:"25px"}}
+                            htmlColor={"#4ac8ae"}
                           />{" "}
                           {/* Adjusts spacing between the icon and the text */}
                           {/* Text Description */}
                           <Typography
-                            textColor={"neutral.300"}
+                            textColor={"neutral.100"}
                             sx={{
                               display: "block", // Ensures the Typography behaves as a block element
-                              width: "274px", // Fixed width for the text container (where text should wrap)
-                              wordWrap: "break-word", // Allows words to break and continue on the next line
+                              width: "100%", // Fixed width for the text container (where text should wrap)
+                              // wordWrap: "break-word", // Allows words to break and continue on the next line
                               whiteSpace: "normal", // Allow wrapping at the natural spaces in text
                               overflow: "visible", // Make sure the overflow is visible (no hidden content)
-                              textOverflow: "clip", // Disable ellipsis for text that overflows
+                              textOverflow: "ellipsis", // Disable ellipsis for text that overflows
                             }}
                           >
                             {product.productDesc}
