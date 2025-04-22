@@ -1,244 +1,267 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import {
-  Box,
-  Button,
-  Container,
-  ListItemIcon,
-  Menu,
-  MenuItem,
-  Stack,
+    Box,
+    Button,
+    Container,
+    ListItemIcon,
+    Menu,
+    MenuItem,
+    Stack, useMediaQuery,
 } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import Basket from "./Basket";
-import { CartItem } from "../../../lib/types/search";
-import { useGlobals } from "../../hooks/useGlobals";
-import { serverApi } from "../../../lib/config";
-import { BoltOutlined, Logout } from "@mui/icons-material";
+import {CartItem} from "../../../lib/types/search";
+import {useGlobals} from "../../hooks/useGlobals";
+import {serverApi} from "../../../lib/config";
+import {BoltOutlined, Logout} from "@mui/icons-material";
 import Typography from "@mui/joy/Typography";
 
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+
+
 interface HomeNavbarProps {
-  cartItems: CartItem[];
-  onAdd: (item: CartItem) => void;
-  onRemove: (item: CartItem) => void;
-  onDelete: (item: CartItem) => void;
-  onDeleteAll: () => void;
-  setSignupOpen: (isOpen: boolean) => void;
-  setLoginOpen: (isOpen: boolean) => void;
-  handleLogoutClick: (e: React.MouseEvent<HTMLElement>) => void;
-  anchorEl: HTMLElement | null;
-  handleCloseLogut: () => void;
-  handleLogoutRequest: () => void;
+    cartItems: CartItem[];
+    onAdd: (item: CartItem) => void;
+    onRemove: (item: CartItem) => void;
+    onDelete: (item: CartItem) => void;
+    onDeleteAll: () => void;
+    setSignupOpen: (isOpen: boolean) => void;
+    setLoginOpen: (isOpen: boolean) => void;
+    handleLogoutClick: (e: React.MouseEvent<HTMLElement>) => void;
+    anchorEl: HTMLElement | null;
+    handleCloseLogut: () => void;
+    handleLogoutRequest: () => void;
 }
+
 export default function HomeNavbar(props: HomeNavbarProps) {
-  const {
-    cartItems,
-    onAdd,
-    onRemove,
-    onDelete,
-    onDeleteAll,
-    setSignupOpen,
-    setLoginOpen,
-    handleLogoutClick,
-    anchorEl,
-    handleCloseLogut,
-    handleLogoutRequest,
-  } = props;
-  const { authMember } = useGlobals();
+    const {
+        cartItems,
+        onAdd,
+        onRemove,
+        onDelete,
+        onDeleteAll,
+        setSignupOpen,
+        setLoginOpen,
+        handleLogoutClick,
+        anchorEl,
+        handleCloseLogut,
+        handleLogoutRequest,
+    } = props;
+    const {authMember} = useGlobals();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const media1000 = useMediaQuery("(max-width: 1000px)");
 
-  /** HANDLERS */
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+    /** HANDLERS */
 
-  return (
-    <div className="home-navbar">
-      <Container className="navbar-container">
-        <Stack className="menu">
-          <Box>
-            <NavLink to="/">
-              <img
-                className="brand-logo"
-                alt="Logo"
-                src="/icons/new-logo.png"
-              />
-            </NavLink>
-          </Box>
-          <Stack className="links">
-            <Box className={"hover-line"}>
-              <NavLink to="/" activeClassName={"underline"}>
-                Home
-              </NavLink>
-            </Box>
-            <Box className={"hover-line"}>
-              <NavLink to="/about-us" activeClassName={"underline"}>
-                About Us
-              </NavLink>
-            </Box>
-            <Box className={"hover-line"}>
-              <NavLink to="/products" activeClassName={"underline"}>
-                Universities
-              </NavLink>
-            </Box>
-            {authMember ? (
-              <Box className={"hover-line"}>
-                <NavLink to="/orders" activeClassName={"underline"}>
-                  Orders
-                </NavLink>
-              </Box>
-            ) : null}
-            {authMember ? (
-              <Box className={"hover-line"}>
-                <NavLink to="/member-page" activeClassName={"underline"}>
-                  My Page
-                </NavLink>
-              </Box>
-            ) : null}
-            <Box className={"hover-line"}>
-              <NavLink to="/help" activeClassName={"underline"}>
-                Help
-              </NavLink>
-            </Box>
-            {/* BASKET */}
-            <Basket
-              cartItems={cartItems}
-              onAdd={onAdd}
-              onRemove={onRemove}
-              onDelete={onDelete}
-              onDeleteAll={onDeleteAll}
-            />
-            {!authMember ? (
-              <Box className={"auth-wrapper"}>
-                <Button
-                  className="login-button"
-                  onClick={() => setLoginOpen(true)}
-                >
-                  <Typography className={"btn-txt"}>Sign in</Typography>
-                </Button>
-                <Box className={"signup"}>
-                  <Button
-                    variant={"contained"}
-                    className={"signup-button"}
-                    onClick={() => setSignupOpen(true)}
-                  >
-                    <Typography className={"btn-txt"}>Sign up</Typography>
-                  </Button>
+    return (
+        <div className="home-navbar">
+            <Container className="navbar-container">
+
+
+                <Stack className="menu">
+                    <Box>
+                        <NavLink to="/">
+                            <img
+                                className="brand-logo"
+                                alt="Logo"
+                                src="/icons/new-logo.png"
+                            />
+                        </NavLink>
+                    </Box>
+                    <div className="nav_burger" onClick={toggleMenu}>
+                        {isMenuOpen ? <CloseIcon/> : <MenuIcon/>}
+                    </div>
+                    <Stack className={`links ${isMenuOpen ? 'open' : ''}`}>
+                        <Box className={"hover-line"}>
+                            <NavLink to="/" activeClassName={"underline"}>
+                                Home
+                            </NavLink>
+                        </Box>
+                        <Box className={"hover-line"}>
+                            <NavLink to="/about-us" activeClassName={"underline"}>
+                                About Us
+                            </NavLink>
+                        </Box>
+                        <Box className={"hover-line"}>
+                            <NavLink to="/products" activeClassName={"underline"}>
+                                Universities
+                            </NavLink>
+                        </Box>
+                        {authMember ? (
+                            <Box className={"hover-line"}>
+                                <NavLink to="/orders" activeClassName={"underline"}>
+                                    Orders
+                                </NavLink>
+                            </Box>
+                        ) : null}
+                        {authMember ? (
+                            <Box className={"hover-line"}>
+                                <NavLink to="/member-page" activeClassName={"underline"}>
+                                    My Page
+                                </NavLink>
+                            </Box>
+                        ) : null}
+                        <Box className={"hover-line"}>
+                            <NavLink to="/help" activeClassName={"underline"}>
+                                Help
+                            </NavLink>
+                        </Box>
+                        {/* BASKET */}
+                        <Basket
+                            cartItems={cartItems}
+                            onAdd={onAdd}
+                            onRemove={onRemove}
+                            onDelete={onDelete}
+                            onDeleteAll={onDeleteAll}
+                        />
+                        {!authMember ? (
+                            <Box className={"auth-wrapper"}>
+                                <Button
+                                    className="login-button"
+                                    onClick={() => setLoginOpen(true)}
+                                >
+                                    <Typography className={"btn-txt"}>Sign in</Typography>
+                                </Button>
+                                <Box className={"signup"}>
+                                    <Button
+                                        variant={"contained"}
+                                        className={"signup-button"}
+                                        onClick={() => setSignupOpen(true)}
+                                    >
+                                        <Typography className={"btn-txt"}>Sign up</Typography>
+                                    </Button>
+                                </Box>
+                            </Box>
+                        ) : (
+                            <img
+                                alt="Profile-picture"
+                                className="user-avatar"
+                                src={
+                                    authMember?.memberImage
+                                        ? `${serverApi}/${authMember?.memberImage}`
+                                        : "/icons/default-user.svg"
+                                }
+                                aria-haspopup={"true"}
+                                onClick={handleLogoutClick}
+                            />
+                        )}
+                        <Menu
+                            anchorEl={anchorEl}
+                            id="account-menu"
+                            open={Boolean(anchorEl)}
+                            onClose={handleCloseLogut}
+                            onClick={handleCloseLogut}
+                            PaperProps={{
+                                elevation: 0,
+                                sx: {
+                                    overflow: "visible",
+                                    filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                                    mt: 1.5,
+                                    "& .MuiAvatar-root": {
+                                        width: 32,
+                                        height: 32,
+                                        ml: -0.5,
+                                        mr: 1,
+                                    },
+                                    "&:before": {
+                                        content: '""',
+                                        display: "block",
+                                        position: "absolute",
+                                        top: 0,
+                                        right: 14,
+                                        width: 10,
+                                        height: 10,
+                                        bgcolor: "background.paper",
+                                        transform: "translateY(-50%) rotate(45deg)",
+                                        zIndex: 0,
+                                    },
+                                },
+                            }}
+                            transformOrigin={{horizontal: "right", vertical: "top"}}
+                            anchorOrigin={{horizontal: "right", vertical: "bottom"}}
+                        >
+                            <MenuItem onClick={handleLogoutRequest}>
+                                <ListItemIcon>
+                                    <Logout fontSize="small" style={{color: "blue"}}/>
+                                </ListItemIcon>
+                                Logout
+                            </MenuItem>
+                        </Menu>
+                    </Stack>
+                </Stack>
+
+
+                <Box className={"header-frame"}>
+                    <Stack className="header-frame_left">
+                        <Box className={"head-main-txt"}>
+                            Find <span style={{color: "#20b486"}}>path</span> to{" "}
+                            <span style={{color: "#20b486"}}>shape</span> your future with{" "}
+                            <span style={{color: "#20b486"}}>confidence</span>
+                        </Box>
+                        <Box className={"wel-txt"}>
+                            Find the perfect university with expert insights. The smartest way
+                            to explore, compare, and plan your future education.
+                        </Box>
+                        <Box className={"service-btns"}>
+                            <Box className={"signup"}>
+                                {!authMember ? (
+                                    <Button
+                                        className={"signup-button"}
+                                        onClick={() => setSignupOpen(true)}
+                                    >
+                                        Get Started
+                                    </Button>
+                                ) : null}
+                            </Box>
+
+                            <Button className={"Scholarships"}>
+                                <NavLink to="/products">
+                                    <Typography className={"btn-txt"}>Scholarships</Typography>
+                                </NavLink>
+                            </Button>
+                        </Box>
+                    </Stack>
+                    <Stack className={"header_element_right"}>
+                        asdasd
+                    </Stack>
                 </Box>
-              </Box>
-            ) : (
-              <img
-                alt="Profile-picture"
-                className="user-avatar"
-                src={
-                  authMember?.memberImage
-                    ? `${serverApi}/${authMember?.memberImage}`
-                    : "/icons/default-user.svg"
-                }
-                aria-haspopup={"true"}
-                onClick={handleLogoutClick}
-              />
-            )}
-            <Menu
-              anchorEl={anchorEl}
-              id="account-menu"
-              open={Boolean(anchorEl)}
-              onClose={handleCloseLogut}
-              onClick={handleCloseLogut}
-              PaperProps={{
-                elevation: 0,
-                sx: {
-                  overflow: "visible",
-                  filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-                  mt: 1.5,
-                  "& .MuiAvatar-root": {
-                    width: 32,
-                    height: 32,
-                    ml: -0.5,
-                    mr: 1,
-                  },
-                  "&:before": {
-                    content: '""',
-                    display: "block",
-                    position: "absolute",
-                    top: 0,
-                    right: 14,
-                    width: 10,
-                    height: 10,
-                    bgcolor: "background.paper",
-                    transform: "translateY(-50%) rotate(45deg)",
-                    zIndex: 0,
-                  },
-                },
-              }}
-              transformOrigin={{ horizontal: "right", vertical: "top" }}
-              anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-            >
-              <MenuItem onClick={handleLogoutRequest}>
-                <ListItemIcon>
-                  <Logout fontSize="small" style={{ color: "blue" }} />
-                </ListItemIcon>
-                Logout
-              </MenuItem>
-            </Menu>
-          </Stack>
-        </Stack>
-        <Stack className={"header-frame"}>
-          <Stack className={"detail"}>
-            <Box className={"head-main-txt"}>
-              Find <span style={{ color: "#20b486" }}>path</span> to{" "}
-              <span style={{ color: "#20b486" }}>shape</span> your future with{" "}
-              <span style={{ color: "#20b486" }}>confidence</span>
-            </Box>
-            <Box className={"wel-txt"}>
-              Find the perfect university with expert insights. The smartest way
-              to explore, compare, and plan your future education.
-            </Box>
-            <Box className={"service-btns"}>
-              <Box className={"signup"}>
-                {!authMember ? (
-                  <Button
-                    className={"signup-button"}
-                    onClick={() => setSignupOpen(true)}
-                  >
-                    Get Started
-                  </Button>
-                ) : null}
-              </Box>
+                <Stack className={"detail"}>
+                    <Box className={"logo-frame"}>
+                        <div className={"logo-img"}></div>
+                    </Box>
 
-              <Button className={"Scholarships"}>
-                <NavLink to="/products">
-                  <Typography className={"btn-txt"}>Scholarships</Typography>
-                </NavLink>
-              </Button>
-            </Box>
-            <Box className={"logo-frame"}>
-              <div className={"logo-img"}></div>
-            </Box>
-
-            <Stack className={"brand-frame"}>
-              <Box className={"brand-txt-wrapper"}>
-                <Typography className={"txt"}>
+                    <Stack className={"brand-frame"}>
+                        <Box className={"brand-txt-wrapper"}>
+                            <Typography className={"txt"}>
                   <span
-                    style={{
-                      color: "#20B486",
-                      fontFamily: "Inter, sans-serif",
-                      fontSize: "30px",
-                      fontStyle: "normal",
-                      fontWeight: 700,
-                      lineHeight: "34px",
-                    }}
+                      style={{
+                          color: "#20B486",
+                          fontFamily: "Inter, sans-serif",
+                          fontSize: "30px",
+                          fontStyle: "normal",
+                          fontWeight: 700,
+                          lineHeight: "34px",
+                      }}
                   >
                     250+
-                  </span><br />
-                  Collaboration
-                </Typography>
-              </Box>
-              <Box className={"brand-logo"}>
-                <div className={"duolingo"}> <img src="/icons/duolingo.svg" alt="" /></div>
-                <div className={"codecov"}><img src="/icons/codecev.svg" alt="" /></div>
-                <div className={"testing"}><img src="/icons/UserTesting.svg" alt="" /></div>
-                <div className={"magic"}><img src="/icons/MagicLeap.svg" alt="" /></div>
-              </Box>
-            </Stack>
-          </Stack>
-        </Stack>
-      </Container>
-    </div>
-  );
+                  </span>
+                                <br/>
+                                Collaboration
+                            </Typography>
+                        </Box>
+                        <Box className={"brand-logo"}>
+                            <div className={"duolingo brand_logo_item"}><img src="/icons/duolingo.svg" alt=""/></div>
+                            <div className={"codecov brand_logo_item"}><img src="/icons/codecev.svg" alt=""/></div>
+                            <div className={"testing brand_logo_item"}><img src="/icons/UserTesting.svg" alt=""/></div>
+                            <div className={"magic brand_logo_item"}><img src="/icons/MagicLeap.svg" alt=""/></div>
+                        </Box>
+                    </Stack>
+                </Stack>
+            </Container>
+        </div>
+    );
 }
