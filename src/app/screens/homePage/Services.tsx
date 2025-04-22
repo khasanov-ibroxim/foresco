@@ -19,8 +19,8 @@ export default function Services() {
         <Stack className={"cards"}>
           <Box className={"card"}>
             <div className="container our-services">
-              <div className="row">
-                <div className="col-sm-4">
+              <div className="row  d-flex justify-content-between">
+                <div className="col-lg-4">
                   <div className="flip-container">
                     <div className="flipper">
                       <div className="front" style={{ background: "#4AC8AE" }}>
@@ -61,7 +61,7 @@ export default function Services() {
                   </div>
                 </div>
 
-                <div className="col-sm-4">
+                <div className="col-lg-4">
                   <div className="flip-container">
                     <div className="flipper">
                       <div className="front" style={{ background: "white" }}>
@@ -111,7 +111,7 @@ export default function Services() {
                   </div>
                 </div>
 
-                <div className="col-sm-4">
+                <div className="col-lg-4">
                   <div className="flip-container">
                     <div className="flipper">
                       <div className="front" style={{ background: "white" }}>

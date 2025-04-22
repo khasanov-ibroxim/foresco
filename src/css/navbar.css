@@ -625,6 +625,7 @@
         border-radius: 25px;
         width: 100%;
         min-width: auto;
+        z-index: 99;
     }
 
     .home-navbar .navbar-container .menu {
