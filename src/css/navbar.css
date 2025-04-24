@@ -1,17 +1,16 @@
 .home-navbar {
     width: 100%;
-
     display: flex;
 }
 
-.home-navbar .navbar-container {
+.home-navbar  {
     /*margin-top: 55px;*/
     /*height: 642px;*/
     /*background: url("/public/img/Banneryangi.svg");*/
     /*background-size: cover;*/
 }
 
-.home-navbar .navbar-container .menu {
+.home-navbar  .menu {
     padding-top: 40px;
     height: 50px;
     flex-direction: row;
@@ -19,12 +18,12 @@
     align-items: center;
 }
 
-.home-navbar .navbar-container .brand-logo {
+.home-navbar  .brand-logo {
     width: 200px;
     height: 80px;
 }
 
-.home-navbar .navbar-container .menu .links {
+.home-navbar  .menu .links {
     min-width: 700px;
     justify-content: space-between;
     flex-direction: row;
@@ -33,7 +32,7 @@
 }
 
 .home-navbar
-.navbar-container
+
 .menu
 .links
 .auth-wrapper
@@ -51,7 +50,6 @@
 }
 
 .home-navbar
-.navbar-container
 .menu
 .links
 .auth-wrapper
@@ -69,14 +67,14 @@
     text-transform: none;
 }
 
-.home-navbar .navbar-container .menu .links .login-button {
+.home-navbar  .menu .links .login-button {
     background-color: transparent;
     border: none; /* Optional: Removes border if any */
     color: inherit; /* Keeps the text color as default */
     cursor: pointer;
 }
 
-.home-navbar .navbar-container .menu .links .login-button .btn-txt {
+.home-navbar  .menu .links .login-button .btn-txt {
     color: #fff;
     font-family: Inter, sans-serif;
     font-size: 16px;
@@ -153,13 +151,13 @@
     transform: translate(0, 5%);
 }
 
-.home-navbar .navbar-container .menu .links .auth-wrapper {
+.home-navbar  .menu .links .auth-wrapper {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.home-navbar .navbar-container .menu .user-avatar {
+.home-navbar  .menu .user-avatar {
     width: 50px;
     height: 50px;
     border-radius: 24px;
@@ -200,7 +198,7 @@
     transform-origin: 0% 50%;
 }
 
-.home-navbar .navbar-container .header-frame {
+.home-navbar  .header-frame {
     margin-top: 10%;
     align-items: center;
     justify-content: space-between;
@@ -210,10 +208,10 @@
 }
 
 .header_element_right {
-    width: 50%;
+    width: 33%;
 }
 
-.home-navbar .navbar-container .header-frame .detail {
+.home-navbar  .header-frame .detail {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -312,13 +310,13 @@
     color: #20b486;
 }
 
-.home-navbar .navbar-container .logo-frame {
+.home-navbar  .logo-frame {
     margin-top: 43px;
-    width: 529px;
+    width: 80%;
     height: 40px;
 }
 
-.home-navbar .navbar-container .logo-frame .logo-img {
+.home-navbar  .logo-frame .logo-img {
     width: 100%;
     height: 100%;
     background: url("/public/img/logo.svg");
@@ -327,7 +325,7 @@
     filter: invert(25%);
 }
 
-.home-navbar .navbar-container .brand-frame {
+.home-navbar  .brand-frame {
     width: 100%;
     height: 40px;
     display: flex;
@@ -337,11 +335,11 @@
     margin-top: 40px;
 }
 
-.home-navbar .navbar-container .brand-frame .brand-txt-wrapper {
+.home-navbar  .brand-frame .brand-txt-wrapper {
     width: 178px;
 }
 
-.home-navbar .navbar-container .brand-frame .brand-txt-wrapper .txt {
+.home-navbar  .brand-frame .brand-txt-wrapper .txt {
     color: #101828;
     font-family: Inter, sans-serif;
     font-size: 25px;
@@ -350,7 +348,7 @@
     line-height: 34px;
 }
 
-.home-navbar .navbar-container .brand-frame .brand-logo {
+.home-navbar  .brand-frame .brand-logo {
     width: 153.138px;
     height: 36px;
     display: flex;
@@ -367,23 +365,23 @@
     /* background-size: cover; */
 }
 
-.other-navbar .navbar-container {
+.other-navbar  {
     margin-top: 55px;
 }
 
-.other-navbar .navbar-container .menu {
+.other-navbar  .menu {
     height: 50px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.other-navbar .navbar-container .brand-logo {
+.other-navbar  .brand-logo {
     width: 125px;
     height: 30px;
 }
 
-.other-navbar .navbar-container .menu .links {
+.other-navbar  .menu .links {
     min-width: 700px;
     justify-content: space-between;
     flex-direction: row;
@@ -391,12 +389,12 @@
     display: flex;
 }
 
-.other-navbar .navbar-container .menu .links .login-button {
+.other-navbar  .menu .links .login-button {
     background: #3776cc;
     color: #f8f8ff;
 }
 
-.other-navbar .navbar-container .menu .user-avatar {
+.other-navbar  .menu .user-avatar {
     width: 50px;
     height: 50px;
     border-radius: 24px;
@@ -569,23 +567,23 @@
 }
 
 
-.home-navbar .navbar-container .menu .nav_burger {
+.home-navbar  .menu .nav_burger {
     display: none;
     cursor: pointer;
 }
 
 .header-frame_left{
-    width: 50%;
+    width: 65%;
 }
 
 @media screen and (max-width: 1000px) {
-    .home-navbar .navbar-container .brand-frame{
+    .home-navbar .brand-frame{
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
         height: auto;
     }
-    .home-navbar .navbar-container .brand-frame .brand-logo{
+    .home-navbar  .brand-frame .brand-logo{
         flex-wrap: wrap;
         width: 100%;
     }
@@ -602,19 +600,19 @@
     .header-frame{
         flex-direction: column;
     }
-    .home-navbar .navbar-container .menu {
+    .home-navbar  .menu {
         width: 100%;
     }
 
-    .home-navbar .navbar-container .menu .nav_burger {
+    .home-navbar  .menu .nav_burger {
         display: block;
     }
 
-    .home-navbar .navbar-container .menu .links {
+    .home-navbar  .menu .links {
         display: none;
     }
 
-    .home-navbar .navbar-container .menu .links.open {
+    .home-navbar  .menu .links.open {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -628,38 +626,38 @@
         z-index: 99;
     }
 
-    .home-navbar .navbar-container .menu {
+    .home-navbar  .menu {
         position: relative;
     }
 
-    .home-navbar .navbar-container .brand-logo {
+    .home-navbar  .brand-logo {
         object-fit: contain;
         width: 130px;
     }
 
-    .home-navbar .navbar-container {
+    .home-navbar  {
         margin-top: 25px;
     }
 
-    .home-navbar .navbar-container .header-frame .detail .head-main-txt {
+    .home-navbar  .header-frame .detail .head-main-txt {
         font-size: 50px;
         width: 100%;
 
     }
-    .home-navbar .navbar-container .brand-frame{
+    .home-navbar  .brand-frame{
         flex-direction: column;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .home-navbar .navbar-container .menu {
+    .home-navbar  .menu {
         padding-top: 20px;
     }
     .head-main-txt{
         font-size: 30px;
         line-height: 40px;
     }
-    .home-navbar .navbar-container .logo-frame{
+    .home-navbar  .logo-frame{
         height: 25px;
     }
     .service-btns{

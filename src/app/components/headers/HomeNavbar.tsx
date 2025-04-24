@@ -19,6 +19,7 @@ import Typography from "@mui/joy/Typography";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
+import logo from "../images/logo.png"
 
 interface HomeNavbarProps {
     cartItems: CartItem[];
@@ -59,7 +60,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
 
     return (
         <div className="home-navbar">
-            <Container className="navbar-container">
+            <Container className="container">
 
 
                 <Stack className="menu">
@@ -68,7 +69,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                             <img
                                 className="brand-logo"
                                 alt="Logo"
-                                src="/icons/new-logo.png"
+                                src={logo}
                             />
                         </NavLink>
                     </Box>
@@ -195,72 +196,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                 </Stack>
 
 
-                <Box className={"header-frame"}>
-                    <Stack className="header-frame_left">
-                        <Box className={"head-main-txt"}>
-                            Find <span style={{color: "#20b486"}}>path</span> to{" "}
-                            <span style={{color: "#20b486"}}>shape</span> your future with{" "}
-                            <span style={{color: "#20b486"}}>confidence</span>
-                        </Box>
-                        <Box className={"wel-txt"}>
-                            Find the perfect university with expert insights. The smartest way
-                            to explore, compare, and plan your future education.
-                        </Box>
-                        <Box className={"service-btns"}>
-                            <Box className={"signup"}>
-                                {!authMember ? (
-                                    <Button
-                                        className={"signup-button"}
-                                        onClick={() => setSignupOpen(true)}
-                                    >
-                                        Get Started
-                                    </Button>
-                                ) : null}
-                            </Box>
 
-                            <Button className={"Scholarships"}>
-                                <NavLink to="/products">
-                                    <Typography className={"btn-txt"}>Scholarships</Typography>
-                                </NavLink>
-                            </Button>
-                        </Box>
-                    </Stack>
-                    <Stack className={"header_element_right"}>
-                        asdasd
-                    </Stack>
-                </Box>
-                <Stack className={"detail"}>
-                    <Box className={"logo-frame"}>
-                        <div className={"logo-img"}></div>
-                    </Box>
-
-                    <Stack className={"brand-frame"}>
-                        <Box className={"brand-txt-wrapper"}>
-                            <Typography className={"txt"}>
-                  <span
-                      style={{
-                          color: "#20B486",
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: "30px",
-                          fontStyle: "normal",
-                          fontWeight: 700,
-                          lineHeight: "34px",
-                      }}
-                  >
-                    250+
-                  </span>
-                                <br/>
-                                Collaboration
-                            </Typography>
-                        </Box>
-                        <Box className={"brand-logo"}>
-                            <div className={"duolingo brand_logo_item"}><img src="/icons/duolingo.svg" alt=""/></div>
-                            <div className={"codecov brand_logo_item"}><img src="/icons/codecev.svg" alt=""/></div>
-                            <div className={"testing brand_logo_item"}><img src="/icons/UserTesting.svg" alt=""/></div>
-                            <div className={"magic brand_logo_item"}><img src="/icons/MagicLeap.svg" alt=""/></div>
-                        </Box>
-                    </Stack>
-                </Stack>
             </Container>
         </div>
     );

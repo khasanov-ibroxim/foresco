@@ -43,16 +43,16 @@ export default function PopularDishes() {
                       className="card"
                       sx={{ width: "300px", height: "400px" }}
                     >
-                      {" "}
                       {/* Fixed width and height for the card */}
                       <CardCover
                         sx={{
-                          backgroundImage: `url("/img/cutlet.webp")`, // Set image as background
+                          backgroundImage: `url(${imagePath})`, // Set image as background
                           backgroundSize: "cover", // This will ensure the image covers the entire area
                           backgroundPosition: "center", // Center the image in the container
                           backgroundRepeat: "no-repeat", // Prevent repeating the image
                           height: "100%", // Make sure the card cover takes up the full height of the card
                         }}
+                        className={"card_img"}
                       />
                       <CardCover className={"card-cover"} />
                       <CardContent sx={{ justifyContent: "flex-end" }}>
@@ -91,8 +91,7 @@ export default function PopularDishes() {
                           py: 1.5,
                           px: 1.5,
                           borderTop: "1px solid",
-                          maxHeight:"50%",
-                          minHeight:"80px",
+                          height:"80px",
                           alignItems:"flex-start"
                         }}
                       >
