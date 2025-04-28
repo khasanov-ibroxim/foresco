@@ -1,346 +1,415 @@
 /**-----ABOUT-----**/
 .aboutUs-page .about-frame {
-  margin-top: 170px;
+    margin-top: 10%;
 }
 
 .aboutUs-page .about-frame .about-container {
-  width: 1200px;
-  height: 616px;
-  /* background-color: aqua; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  margin-bottom: 80px;
+    width: 100%;
+
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 80px;
 }
-
-
 
 
 .aboutUs-page .about-frame .about-container .about-texts {
-  width: 572px;
-  height: 596px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 
 .aboutUs-page .about-frame .about-container .about-texts .title {
-  color: #1a906b;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 64px */
+    color: #1a906b;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 64px */
 }
 
 .aboutUs-page .about-frame .about-container .about-texts .topic {
-  color: #141415;
-  font-family: "Inter", sans-serif;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 58px;
-  text-transform: capitalize;
+    color: #141415;
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 58px;
+    text-transform: capitalize;
+
 }
 
 .aboutUs-page .about-frame .about-container .about-texts .info {
-  color: #1e1e1e;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
+    color: #1e1e1e;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
 }
 
 .aboutUs-page .about-frame .about-container .about-texts .button button {
-  border-radius: 100px;
-  background: #22b286;
-  display: flex;
-  padding: 16px 20px;
-  justify-content: center;
-  align-items: center;
-  width: 127px;
-  height: 57px;
-  gap: 10px;
-  border: none;
+    border-radius: 100px;
+    background: #22b286;
+    display: flex;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    width: 127px;
+    height: 57px;
+    gap: 10px;
+    border: none;
 }
 
 .aboutUs-page
-  .about-frame
-  .about-container
-  .about-texts
-  .button
-  button
-  .btn-txt {
-  color: var(--Secondary-Color-White, #fff);
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+.about-frame
+.about-container
+.about-texts
+.button
+button
+.btn-txt {
+    color: var(--Secondary-Color-White, #fff);
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .aboutUs-page .about-frame .about-container .about-images {
-  width: 572px;
-  height: 596px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .aboutUs-page .about-frame .about-container .about-images .first-img {
-  width: 376px;
-  height: 246px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  background: lightgray 50% / cover no-repeat;
-  margin-left: 120px;
-  margin-bottom: 50px;
+    width: 80%;
+    height: 246px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: lightgray 50% / cover no-repeat;
+    margin-left: 120px;
+    margin-bottom: 50px;
 }
 
 .aboutUs-page .about-frame .about-container .about-images .second-img {
-  width: 376px;
-  height: 246px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  margin-right: 120px;
-  background: lightgray 50% / cover no-repeat;
+    width: 50%;
+    height: 246px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-right: 120px;
+    background: lightgray 50% / cover no-repeat;
 }
 
 /**-----FEATURE-----**/
 
 .aboutUs-page .features-frame {
-  margin-top: 170px;
+    margin-top: 10%;
 }
 
 .aboutUs-page .features-frame .features-container {
-  width: 1200px;
-  height: 616px;
-  /* background-color: aqua; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  margin-bottom: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features-box {
+    width: 40%;
 }
 
 .aboutUs-page .features-frame .features-container .feature-image {
-  width: 434px;
-  height: 471px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  margin-right: 120px;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 10px;
+
 }
 
 .aboutUs-page .features-frame .features-container .features-texts {
-  width: 572px;
-  height: 596px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 
 .aboutUs-page .features-frame .features-container .features-texts .title {
-  color: #1a906b;
-  text-align: left;
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
+    color: #1a906b;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
 }
 
 .aboutUs-page .features-frame .features-container .features-texts .topic {
-  color: #141414;
-  font-family: "Inter", sans-serif;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 58px; /* 120.833% */
+    color: #141414;
+    font-family: "Inter", sans-serif;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 500;
+
 }
 
 .aboutUs-page .features-frame .features-container .features-texts .info {
-  color: #1e1e1e;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
+    color: #1e1e1e;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
 }
 
 .aboutUs-page
-  .features-frame
-  .features-container
-  .features-texts
-  .button
-  button {
-  border-radius: 100px;
-  background: #22b286;
-  display: flex;
-  padding: 16px 20px;
-  justify-content: center;
-  align-items: center;
-  width: 157px;
-  height: 57px;
-  gap: 10px;
-  border: none;
+.features-frame
+.features-container
+.features-texts
+.button
+button {
+    border-radius: 100px;
+    background: #22b286;
+    display: flex;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    width: 157px;
+    height: 57px;
+    gap: 10px;
+    border: none;
 }
 
 .aboutUs-page
-  .features-frame
-  .features-container
-  .features-texts
-  .button
-  button
-  .btn-txt {
-  color: var(--Secondary-Color-White, #fff);
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+.features-frame
+.features-container
+.features-texts
+.button
+button
+.btn-txt {
+    color: var(--Secondary-Color-White, #fff);
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 /**-----OUR BENFITS-----**/
 
 .aboutUs-page .benefits-frame .benefits-container {
-  width: 1160px;
-  height: 784px;
-  /* background-color: aqua; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  margin-bottom: 80px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 0;
 }
+
 .aboutUs-page .benefits-frame .benefits-container .benefits-texts {
-  width: 814px;
-  /* background-color: red; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+    width: 95%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 .aboutUs-page .benefits-frame .benefits-container .benefits-texts .title {
-  color: #1a906b;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
+    color: #1a906b;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
 }
 
 .aboutUs-page .benefits-frame .benefits-container .benefits-texts .topic {
-  color: #141414;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 58px; /* 145% */
+    color: #141414;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 58px; /* 145% */
+    width: 50%;
 }
 
 .aboutUs-page .benefits-frame .benefits-container .benefits-texts .info {
-  width: 582px;
-  color: #1e1e1e;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
+    width: 50%;
+    color: #1e1e1e;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
 }
 
 .aboutUs-page .benefits-frame .benefits-container .benefits-cards {
-  margin-top: 14px ;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
 .aboutUs-page .benefits-frame .benefits-container .benefits-cards .card-row {
-  width: 1160px;
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  /* background-color: burlywood; */
-}
-.aboutUs-page
-  .benefits-frame
-  .benefits-container
-  .benefits-cards
-  .card-row
-  .card {
-  display: inline-flex;
-  height: 236px;
-  padding: 20px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
-  width: 376px;
-  height: 236px;
-  background-color: #F7FDF9;
-  border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: wrap;
+    /* background-color: burlywood; */
 }
 
 .aboutUs-page
-  .benefits-frame
-  .benefits-container
-  .benefits-cards
-  .card-row
-  .card
-  .number {
-  display: flex;
-  width: 54px;
-  height: 54px;
-  justify-content: center;
-  align-items: center;
-  color: #22b286;
-  text-align: right;
-  font-family: Inter, sans-serif;
-  font-size: 34px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+.benefits-frame
+.benefits-container
+.benefits-cards
+.card-row
+.card {
+    display: inline-flex;
+    height: 236px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    width: 376px;
+    height: 236px;
+    background-color: #F7FDF9;
+    border-radius: 10px;
 }
 
 .aboutUs-page
-  .benefits-frame
-  .benefits-container
-  .benefits-cards
-  .card-row
-  .card
-  .title {
-  color: #141414;
-  font-family: Inter, sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 100%; /* 24px */
+.benefits-frame
+.benefits-container
+.benefits-cards
+.card-row
+.card
+.number {
+    display: flex;
+    width: 54px;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+    color: #22b286;
+    text-align: right;
+    font-family: Inter, sans-serif;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .aboutUs-page
-  .benefits-frame
-  .benefits-container
-  .benefits-cards
-  .card-row
-  .card
-  .info {
-  color: #1e1e1e;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
+.benefits-frame
+.benefits-container
+.benefits-cards
+.card-row
+.card
+.title {
+    color: #141414;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 24px */
+}
+
+.aboutUs-page
+.benefits-frame
+.benefits-container
+.benefits-cards
+.card-row
+.card
+.info {
+    color: #1e1e1e;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+}
+
+
+@media screen and (max-width: 1000px) {
+    .aboutUs-page .about-frame .about-container {
+        flex-direction: column;
+    }
+
+    .aboutUs-page .about-frame .about-container .about-images {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        gap: 10px;
+
+    }
+
+    .aboutUs-page .about-frame .about-container .about-texts {
+        width: 100%;
+    }
+
+    .aboutUs-page .about-frame .about-container .about-images .first-img {
+        width: 48%;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .aboutUs-page .about-frame .about-container .about-images .second-img {
+        width: 48%;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .aboutUs-page .about-frame .about-container .about-texts .topic {
+        font-size: 18px;
+        line-height: 31px;
+    }
+
+    .feature-image {
+        display: none;
+    }
+
+    .aboutUs-page .features-frame .features-container {
+        flex-direction: column;
+    }
+
+    .aboutUs-page .features-frame .features-container .features-texts {
+        width: 100%;
+    }
+    .aboutUs-page .benefits-frame .benefits-container .benefits-texts .topic , .aboutUs-page .benefits-frame .benefits-container .benefits-texts .info{
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+    .aboutUs-page .features-frame .features-container .features-texts .topic {
+        font-size: 25px;
+        line-height: 32px;
+        width: 100%;
+    }
+    .aboutUs-page .benefits-frame .benefits-container .benefits-texts .topic{
+        width: 100%;
+        font-size: 28px;
+        line-height: 32px;
+    }
 }

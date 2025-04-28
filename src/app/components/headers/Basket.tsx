@@ -12,6 +12,7 @@ import { Messages, serverApi } from "../../../lib/config";
 import { sweetErrorHandling } from "../../../lib/sweetAlert";
 import { useGlobals } from "../../hooks/useGlobals";
 import OrderService from "../../services/OrderService";
+import No_data from "../no_data/no_data";
 
 interface BasketProps {
   cartItems: CartItem[];
@@ -73,7 +74,7 @@ export default function Basket(props: BasketProps) {
         onClick={handleClick}
       >
         <Badge badgeContent={cartItems.length} color="secondary">
-          <img src={"/icons/shopping-cart.svg"} />
+          <img src={"/icons/shopping-cart.svg"}  />
         </Badge>
       </IconButton>
       <Menu
@@ -114,7 +115,7 @@ export default function Basket(props: BasketProps) {
         <Stack className={"basket-frame"}>
           <Box className={"all-check-box"}>
             {cartItems.length === 0 ? (
-              <div>Cart is empty!</div>
+              <No_data/>
             ) : (
               <Stack flexDirection={"row"}>
                 <div>Cart Products:</div>

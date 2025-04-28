@@ -7,7 +7,7 @@ import {useGlobals} from "../../hooks/useGlobals";
 
 export default function Header(){
     return(
-        <div className={"home-navbar"}>
+            <div className={""}>
             <div className="container" style={{padding:"0 15px"}}>
                 <Box className={"header-frame"}>
                     <Stack className="header-frame_left">

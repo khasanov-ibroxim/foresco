@@ -1,6 +1,8 @@
 .home-navbar {
     width: 100%;
     display: flex;
+    position: relative;
+    z-index: 9999;
 }
 
 .home-navbar  {
@@ -18,7 +20,7 @@
     align-items: center;
 }
 
-.home-navbar  .brand-logo {
+  .brand-logo {
     width: 200px;
     height: 80px;
 }
@@ -198,7 +200,7 @@
     transform-origin: 0% 50%;
 }
 
-.home-navbar  .header-frame {
+ .header-frame {
     margin-top: 10%;
     align-items: center;
     justify-content: space-between;
@@ -211,7 +213,7 @@
     width: 33%;
 }
 
-.home-navbar  .header-frame .detail {
+ .header-frame .detail {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -246,6 +248,7 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+
 }
 
 
@@ -274,6 +277,7 @@
     font-weight: 600;
     line-height: 20px;
     text-transform: none;
+
 }
 
 .service-btns
@@ -308,15 +312,16 @@
     line-height: 20px;
     text-transform: none;
     color: #20b486;
+
 }
 
-.home-navbar  .logo-frame {
+ .logo-frame {
     margin-top: 43px;
     width: 80%;
     height: 40px;
 }
 
-.home-navbar  .logo-frame .logo-img {
+.logo-frame .logo-img {
     width: 100%;
     height: 100%;
     background: url("/public/img/logo.svg");
@@ -325,21 +330,21 @@
     filter: invert(25%);
 }
 
-.home-navbar  .brand-frame {
+  .brand-frame {
     width: 100%;
     height: 40px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 55px;
     margin-top: 40px;
 }
 
-.home-navbar  .brand-frame .brand-txt-wrapper {
+ .brand-frame .brand-txt-wrapper {
     width: 178px;
 }
 
-.home-navbar  .brand-frame .brand-txt-wrapper .txt {
+ .brand-frame .brand-txt-wrapper .txt {
     color: #101828;
     font-family: Inter, sans-serif;
     font-size: 25px;
@@ -348,7 +353,7 @@
     line-height: 34px;
 }
 
-.home-navbar  .brand-frame .brand-logo {
+  .brand-frame .brand-logo {
     width: 153.138px;
     height: 36px;
     display: flex;
@@ -577,13 +582,13 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .home-navbar .brand-frame{
+     .brand-frame{
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
         height: auto;
     }
-    .home-navbar  .brand-frame .brand-logo{
+     .brand-frame .brand-logo{
         flex-wrap: wrap;
         width: 100%;
     }
@@ -630,7 +635,7 @@
         position: relative;
     }
 
-    .home-navbar  .brand-logo {
+      .brand-logo {
         object-fit: contain;
         width: 130px;
     }
@@ -639,12 +644,12 @@
         margin-top: 25px;
     }
 
-    .home-navbar  .header-frame .detail .head-main-txt {
+    .header-frame .detail .head-main-txt {
         font-size: 50px;
         width: 100%;
 
     }
-    .home-navbar  .brand-frame{
+  .brand-frame{
         flex-direction: column;
     }
 }
