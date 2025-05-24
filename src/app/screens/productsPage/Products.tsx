@@ -20,6 +20,7 @@ import { ProductCollection } from "../../../lib/enums/product.enum";
 import { serverApi } from "../../../lib/config";
 import { useHistory } from "react-router-dom";
 import { CartItem } from "../../../lib/types/search";
+import Test from "./test";
 
 /** REDUX SLICE & SELECTOR **/
 const actionDispatch = (dispatch: Dispatch) => ({
@@ -330,6 +331,10 @@ export default function Products(props: ProductsProps) {
           </Stack>
         </Stack>
       </Container>
+
+
+      <Test/>
+
 
       <div className={"brand-logo"}>
         <Container className="family-brands">
